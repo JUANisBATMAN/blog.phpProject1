@@ -7,11 +7,11 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>php blog</title>
     </head>
     <body>
         <?php
-        require_once(__DIR__ . "/controller/create-db.php");
+        require_once(__DIR__ . "/controller/create-db.php");//shows here database for error
         ?>
     </body>
 </html>
