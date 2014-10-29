@@ -9,5 +9,8 @@
   else {// tells wat to do if there is an error in the code
       echo "Success" . $connection->host_info;
   }
+  
+  $exists = $connection->select_db();
+  
 
 $connection->close();
