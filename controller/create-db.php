@@ -13,7 +13,7 @@
       $query = $connection->query("CREATE DATABASE $datbase");//tells to create database
       
       if($query) {
-         echo "Succesfully created database" . $database;//it says wat to do i
+         echo "Succesfully created database" . $database;//it says wat to do if database is created succesfully
       }
   }
   else{
