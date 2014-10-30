@@ -1,10 +1,10 @@
 <?php
- require_once(__DIR__ . ". . /model /database.php");// it tells the computer where the file directory is at in the webpage
+ require_once(__DIR__ . "/../model/database.php");// it tells the computer where the file directory is at in the webpage
   
   $connection = new mysqli($host, $username, $password);//tells where the database is and connects it
   
-  if($connection->connection_error) {//tells wat to do if there is an error conecting to database
-      die("Error: . $connection->connect_error");//to correct the conection error to database
+  if($connection->connect_error) {//tells wat to do if there is an error conecting to database
+      die("Error: " . $connection->connect_error);//to correct the conection error to database
       }
   
   $exists = $connection->select_db($database);//selects correct database
@@ -13,7 +13,7 @@
       $query = $connection->query("CREATE DATABASE $datbase");//tells to create database
       
       if($query) {
-         echo "Succesfully created database" . $database;//it says wat to do if database is created succesfully
+         echo "Succesfully created database: " . $database;//it says wat to do if database is created succesfully
       }
   }
   else{
