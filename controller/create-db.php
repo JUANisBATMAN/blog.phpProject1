@@ -4,20 +4,20 @@
   $connection = new mysqli($host, $username, $password);//tells where the database is and connects it
   
   if($connection->connect_error) {//tells wat to do if there is an error conecting to database
-      die("Error: " . $connection->connect_error);//to correct the conection error to database
+      die("<p>Error: " . $connection->connect_error . "</p>");//to correct the conection error to database
       }
   
   $exists = $connection->select_db($database);//selects correct database
   
   if(!$exists) {
-      $query = $connection->query("CREATE DATABASE $datbase");//tells to create database
+      $query = $connection->query("CREATE DATABASE $database");//tells to create database
       
       if($query) {
-         echo "Succesfully created database: " . $database;//it says wat to do if database is created succesfully
+         echo "<p>Succesfully created database: " . $database . "/p>";//it says wat to do if database is created succesfully
       }
   }
   else{
-      echo "Database already exists.";
+      echo "<p>Database already exists.</p>";
   }
   
   $query = $connection->query("CREATE TABLE posts ("//table to posts things on blog
@@ -25,5 +25,12 @@
           . "title varchar (255) NOT NULL,"//for blogs title cannot be blank
           . "post text NOT NULL,"//for the actuall blog posts cannot be blank
           . "PRIMARY KEY (id)");//tells the primary keys name is id 
+  
+  if($query) {
+      echo "<p>succesfully created table: posts</p>";
+  }
+  else{
+      echo "<p>$connection->error</p>";
+  }
   
 $connection->close();
