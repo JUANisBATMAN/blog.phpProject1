@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>php blog</title>
-    </head>
-    <body>
-        <?php
-        require_once(__DIR__ . "/controller/create-db.php");//shows here database for error
-        ?>
-    </body>
-</html>
+<?php
+   require_once(__DIR__ . "/view/header.php");//it loads my header
+   require_once(__DIR__ . "/controller/create-db.php");//shows here database for error
+   require_once(__DIR__ . "/view/footer.php");//loads footer
+?>
+    

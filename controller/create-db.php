@@ -24,7 +24,7 @@
           . "id int (11) NOT NULL AUTO_INCREMENT,"//gives blog unique id
           . "title varchar (255) NOT NULL,"//for blogs title cannot be blank
           . "post text NOT NULL,"//for the actuall blog posts cannot be blank
-          . "PRIMARY KEY (id)");//tells the primary keys name is id 
+          . "PRIMARY KEY (id))");//tells the primary keys name is id 
   
   if($query) {
       echo "<p>succesfully created table: posts</p>";
